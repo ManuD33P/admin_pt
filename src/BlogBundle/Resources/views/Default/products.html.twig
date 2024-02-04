@@ -1,0 +1,28 @@
+{# BlogBundle/Resources/views/Default/products.html.twig #}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Productos</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+{% for product in products %}
+    <div class="card">
+        <h3>{{ product.name }}</h3>
+        <p>Precio: ${{ product.price }}</p>
+    </div>
+{% endfor %}
+
+</body>
+</html>

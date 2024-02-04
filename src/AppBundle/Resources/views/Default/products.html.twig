@@ -1,0 +1,46 @@
+{# src/Resources/views/Default/products.html.twig #}
+
+{% extends 'base.html.twig' %}
+
+
+{% block stylesheets %}
+
+
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+        .image{
+            width:100%
+        }
+        .container {
+            width:100vw;
+            heigth:100vh;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:center;
+            align-content:center;
+        }
+    </style>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+{% for product in products %}
+    <div class="card">
+     <img class="image" src={{ product.image }} />
+     <h3>{{ product.name }}</h3>
+     <h4>{{ product.category.name }} </h4>
+    </div>
+{% endfor %}
+<div>
+
+{% endblock %}
+
+
+
